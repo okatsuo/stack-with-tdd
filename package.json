@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "ts-node-dev --respawn src/stack/index.ts",
     "test": "jest",
-    "test:unit": "yarn test --watch"
+    "test:unit": "yarn test --watch",
+    "test:ci": "yarn test --coverage"
   },
   "devDependencies": {
     "@types/jest": "^27.4.0",
