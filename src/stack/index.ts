@@ -2,23 +2,24 @@ export class Stack {
   top = -1
   items = {}
 
-  push(item: string) {
+  push (item: string): typeof this.items {
     this.top += 1
-    //@ts-expect-error
+    // @ts-expect-error
     this.items[this.top] = item
-    //@ts-expect-error
+
+    // @ts-expect-error
     return this.items[this.top]
   }
 
-  peek() {
-    //@ts-expect-error
+  peek (): typeof this.items {
+    // @ts-expect-error
     return this.items[this.top]
   }
 
-  pop() {
-    //@ts-expect-error
+  pop (): typeof this.items {
+    // @ts-expect-error
     const removedItem = this.items[this.top]
-    //@ts-expect-error
+    // @ts-expect-error
     delete this.items[this.top]
     this.top--
     return removedItem
